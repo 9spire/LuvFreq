@@ -1725,8 +1725,8 @@ form textarea.error {
   top: 0;
 }
 .fullscreen .overlay {
-  background-image: -webkit-linear-gradient(#000 0%, #000 60%, #000);
-  background-image: linear-gradient(#000 0%, #000 60%, #000);
+  background-image: -webkit-linear-gradient(#000 40%, #000 80%, #000);
+  background-image: linear-gradient(#000 40%, #000 80%, #000);
   opacity: 0.5;
   position: absolute;
   z-index: 3;
