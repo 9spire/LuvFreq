@@ -2683,7 +2683,7 @@ body {
 }
 
 .modBlogPost {
-  margin: 10px 10px 80px;
+  margin: 10px 10px 20px;
   background: #fff;
 }
 
@@ -2700,11 +2700,11 @@ body {
 }
 
 .modBlogPost .content {
-  padding: 50px 60px;
+  padding: 20px 30px;
 }
 
 .modBlogPost h3 {
-  font-size: 32px;
+  font-size: 28px;
   text-transform: none;
   line-height: 1.2em;
   letter-spacing: 0;
@@ -2729,7 +2729,7 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #999;
+  color: #666;
   margin-bottom: 10px;
 }
 .modBlogPost .tags {
@@ -5704,7 +5704,7 @@ body {
   }
 
   .modMasonryGallery ul.gallery li {
-    width: 50%;
+    width: 100%;
   }
   .modMasonryGallery ul.gallery li.wide {
     width: 100%;
@@ -5731,12 +5731,12 @@ body {
   }
 
   .modMasonryGallery.alt ul.gallery li {
-    width: 46%;
+    width: 98%;
     margin: 2%;
   }
 
   .modMasonryGallery.alt.no-gutter ul.gallery li {
-    width: 50%;
+    width: 100%;
     margin: 0;
   }
 
