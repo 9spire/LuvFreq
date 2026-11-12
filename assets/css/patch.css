@@ -420,7 +420,8 @@ body.posts .modBlogPost {
 }
 
 .site-nav a:hover,
-.site-nav a:focus {
+.site-nav a:focus,
+.site-nav li.active > a {
   color: #edb713;
 }
 
