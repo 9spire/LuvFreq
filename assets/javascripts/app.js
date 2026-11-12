@@ -283,22 +283,22 @@ jQuery(document).foundation();
     }
 
     function closeMobileNav() {
-      $('#primary-nav').addClass('closed').removeClass('is-open').hide();
+      $('#primary-nav').removeClass('is-open');
       $('#menu-toggler').attr('aria-expanded', 'false').attr('aria-label', 'Open menu');
     }
 
     function openMobileNav() {
-      $('#primary-nav').removeClass('closed').addClass('is-open').css('display', 'block');
+      $('#primary-nav').addClass('is-open');
       $('#menu-toggler').attr('aria-expanded', 'true').attr('aria-label', 'Close menu');
     }
 
     $(document).on('click', '#menu-toggler', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      if ($('#primary-nav').hasClass('closed')) {
-        openMobileNav();
-      } else {
+      if ($('#primary-nav').hasClass('is-open')) {
         closeMobileNav();
+      } else {
+        openMobileNav();
       }
     });
 
