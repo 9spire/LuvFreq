@@ -364,22 +364,25 @@ body.posts .modBlogPost {
 }
 
 .site-header__inner {
+  width: 100%;
+  max-width: none;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.site-header__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
-  max-width: none;
   min-height: 56px;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
 }
 
 .site-header__brand {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  line-height: 1;
+  line-height: 0;
 }
 
 .site-header .site-logo {
@@ -435,11 +438,20 @@ body.posts .modBlogPost {
   box-shadow: none;
   width: 2.25rem;
   height: 2.25rem;
+  margin: 0;
   padding: 0;
   color: #fff;
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.menu-toggler .fa {
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .menu-toggler:hover,
@@ -457,8 +469,13 @@ body.posts .modBlogPost {
 
 @media only screen and (max-width: 900px) {
   .site-header__inner {
-    min-height: 50px;
     padding: 0 0.75rem;
+  }
+
+  .site-header__bar {
+    position: relative;
+    flex-wrap: wrap;
+    min-height: 50px;
   }
 
   .site-header .site-logo {
@@ -469,8 +486,6 @@ body.posts .modBlogPost {
 
   .menu-toggler {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     margin-left: auto;
   }
 

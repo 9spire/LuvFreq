@@ -6,41 +6,43 @@
 
 <header class="site-header {{ classname }}">
   <div class="site-header__inner">
-    <a class="site-header__brand" href="{{ 'index.html' | relative_url }}">
-      <img
-        class="site-logo"
-        src="{{ "/assets/images/LuvFreq-white500.png" | relative_url }}"
-        alt="Luv Freq"
-        width="90"
-        height="32"
-      />
-    </a>
+    <div class="site-header__bar">
+      <a class="site-header__brand" href="{{ 'index.html' | relative_url }}">
+        <img
+          class="site-logo"
+          src="{{ "/assets/images/LuvFreq-white500.png" | relative_url }}"
+          alt="Luv Freq"
+          width="90"
+          height="32"
+        />
+      </a>
 
-    <button
-      type="button"
-      id="menu-toggler"
-      class="menu-toggler"
-      aria-expanded="false"
-      aria-controls="primary-nav"
-      aria-label="Open menu"
-    >
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
+      <button
+        type="button"
+        id="menu-toggler"
+        class="menu-toggler"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open menu"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
 
-    <nav id="primary-nav" class="site-nav" aria-label="Primary">
-      <ul>
-        {% for item in site.data.nav %}
-          {% assign first = item.path | truncate:1,'' %}
-          {% if first != '#' %}
-            {% assign href = item.path | relative_url %}
-          {% elsif page.onepage %}
-            {% assign href = item.path %}
-          {% else %}
-            {% assign href = 'index.html' | append:item.path | relative_url %}
-          {% endif %}
-          <li><a href="{{ href }}">{{ item.name }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          {% for item in site.data.nav %}
+            {% assign first = item.path | truncate:1,'' %}
+            {% if first != '#' %}
+              {% assign href = item.path | relative_url %}
+            {% elsif page.onepage %}
+              {% assign href = item.path %}
+            {% else %}
+              {% assign href = 'index.html' | append:item.path | relative_url %}
+            {% endif %}
+            <li><a href="{{ href }}">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
