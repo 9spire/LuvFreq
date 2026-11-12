@@ -1,15 +1,12 @@
-- name: ↑ Top
+- name: Top
   path: "#top"
   section_id: home
 - name: Bio
   path: "#about"
   section_id: about
-- name: Mixes
-  path: "#works"
-  section_id: works
-- name: Festivals & Shows
-  path: "#shows"
-  section_id: shows
+- name: Releases
+  path: "#releases"
+  section_id: releases
 - name: Contact
   path: "#contact"
   section_id: contact

@@ -282,11 +282,30 @@ jQuery(document).foundation();
       });
     }
 
-    $('#menu-toggler').click(function() {
-      $('.top-bar-section').toggle();
-      return false;
-      // $('.top-bar-section').slideToggle('slow');
-      // $('.top-bar-section').toggle('slide');
+    function closeMobileNav() {
+      $('#primary-nav').addClass('closed').removeClass('is-open').hide();
+      $('#menu-toggler').attr('aria-expanded', 'false').attr('aria-label', 'Open menu');
+    }
+
+    function openMobileNav() {
+      $('#primary-nav').removeClass('closed').addClass('is-open').css('display', 'block');
+      $('#menu-toggler').attr('aria-expanded', 'true').attr('aria-label', 'Close menu');
+    }
+
+    $(document).on('click', '#menu-toggler', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if ($('#primary-nav').hasClass('closed')) {
+        openMobileNav();
+      } else {
+        closeMobileNav();
+      }
+    });
+
+    $(document).on('click', '#primary-nav a', function() {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        closeMobileNav();
+      }
     });
 
     $('.scroll-down').click(function() {

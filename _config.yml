@@ -1,0 +1,21 @@
+title: Luv Freq
+email: luvfreq@gmail.com
+description: >-
+  Portland producer Luv Freq — named for 528 Hz, the love frequency.
+  Stream Drop It and 22 45 on Spotify.
+baseurl: ""
+url: "https://www.luvfreq.com"
+lang: en
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - bower_components/modernizr
+  - README.md
+  - LICENSE

@@ -1,0 +1,8 @@
+- name: Spotify
+  url: https://open.spotify.com/artist/12hTX3teWDeNY0mdLvcwUb
+  icon: fa-spotify
+  label: Listen on Spotify
+- name: Ms Match
+  url: https://www.msmatchmusic.com
+  icon: fa-headphones
+  label: DJ & booking — Ms Match
